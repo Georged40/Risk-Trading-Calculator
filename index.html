@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="En">
+    <head Content-Type = text/html>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="styles.css">
+        <title>Trading Risk Calculator</title>
+    </head>
+    <body>
+        <div id="mainRoot" class="mainRoot container" >
+            <h1 class="label">Trading Risk Calculator</h1>
+            <p class="marginToLeft" id="currencyPair">Currency Pair: <span >
+                <select id="currencyPairs">
+                    <option id="optionHolder" >Choose Pair</option>
+                    <option id="nasdaq">NASDAQ</option>
+                    <option id="oil">CRUDE OIL</option>
+                    <option id="gold">GOLD</option>
+                    <option id="bitcoin">BITCOIN</option>
+                    <option id="eurjpy">EURJPY</option>
+                    <option id="eurusd">EURUSD</option>
+                    <option id="gbpusd">GBPUSD</option>
+                    <option id="gbpjpy">GBPJPY</option>
+    
+            </select>
+            </span></p>
+            <div class="withAttributes">
+            <p class="marginToLeft" >Lot Size: <input class="first" title="Numbers only" type="number" id="lotSize" name="quantity" min="1" max="5"/></p>
+            <p  class="marginToright" >Entry Price: <input class="second" type="number" id="entryPrice" max="10"/></p>
+            <p class="marginToLeft" >   Stop Loss: <input class="third" type="number" max="10" id="lossLevel"/></p>
+            <p class="marginToright" >Take Profit: <input class="fourth" type="number" id="profitLevel" max="10"/></p>
+            </div>
+            <!-- <p class="marginToLeft">Profit: <span class="green" id="profit">2000</span></p> -->
+            <p class="marginToLeft">Profit: <span class="green" id="profit">0.000</span></p>
+            <!-- <p class="marginToright">Loss: <span class="red" id="loss">2000</span></p> -->
+            <p class="marginToright" >Loss: <span class="red" id="loss">0.000</span> </p>
+            <button type="button" onclick="checkRisk()" id="calculateButton" >Calculate Risk</button>
+            <!--<h1></h1>
+                currencyPair, currentPrice, stopLoss, takeProfit
+           <div id="wrapInputs">
+               <label class="single" for="Pair"></label>Enter currency Pair: <input id="currencyPair" type="text" />
+               <label class="triplets" for="Price"></label>Enter Price: <input type="number" /><br/>
+               <label class="triplets" for="StopLoss"></label>Enter Stop Loss: <input type="number" />
+               <label class="triplets" for="Take profit"></label>Enter Take Profit: <input type="number"/><br/>
+               <label class="duo" for="Loss"></label>Your Risk: <input type="number"/>
+               <label class="duo" for="Profit"></label>Your Potential Profit: <input type="number"/>
+                
+           </div> -->
+           
+        </div>
+        <p class="developer">Developed by:<span>George Dlamini</span> </p>
+        <script src="index.js">
+            
+        </script>
+    </body>
+</html>
